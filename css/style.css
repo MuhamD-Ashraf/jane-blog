@@ -1,0 +1,697 @@
+/* start gloabl ruels */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "oswald", "open sans";
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* begin of nav bar with search bar and drop down */
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #03334e;
+  position: fixed;
+  z-index: 22;
+}
+
+.logo {
+  font-size: 28px;
+  padding-left: 20px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: white;
+  text-shadow: 2px 2px #00b4cc;
+}
+
+/* begin of search bar with button */
+
+.search {
+  width: 34%;
+  display: flex;
+  padding: 1px;
+}
+.searchTerm {
+  width: 100%;
+  border: 3px solid #03334e;
+  border-right: 2px solid #03334e;
+  padding: 5px;
+  height: 30px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9dbfaf;
+}
+
+.searchTerm:focus {
+  color: #00b4cc;
+}
+
+.searchButton {
+  width: 40px;
+  height: 30px;
+  border: 3px solid #03334e;
+  border-left: none;
+  background: #03334e;
+  text-align: center;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 0px;
+}
+.searchButton:hover {
+  background-color: white;
+  color: #03334e;
+}
+
+/* end of search bar with button */
+
+/* begin of drop down links */
+
+.dropdown {
+  position: relative;
+  color: white;
+  padding-right: 20px;
+  font-size: 25px;
+}
+.dropdown:hover {
+  color: #00b4cc;
+}
+.dropdwon-content ul {
+  list-style: none;
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 19px;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+  border: none;
+  top: calc(100% + 11px);
+  background-color: #f1f1f1;
+  color: black;
+}
+
+/* ul arrow */
+
+.dropdwon-content ul::before {
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #f6f6f6 transparent;
+  position: absolute;
+  right: 0px;
+  top: -20px;
+}
+
+/* to make the list appear */
+
+.dropdown:hover .dropdwon-content ul {
+  display: block;
+}
+.dropdwon-content ul li a {
+  display: block;
+  /* for styling and padding */
+  padding: 15px;
+  text-decoration: none;
+  color: #00b4cc;
+  transition: 0.3s;
+}
+.dropdwon-content ul li a:hover {
+  padding-left: 25px;
+}
+/* border bottom for links expect the last one */
+.dropdwon-content ul li:not(:last-child) a {
+  border-bottom: 1px solid #ddd;
+}
+
+/* end of nav bar with search bar and drop down  */
+
+/* begin of text section */
+
+.txtsec {
+  text-align: center;
+  padding: 20px;
+}
+.txtsec h1 {
+  margin: 0px;
+  text-transform: uppercase;
+  font-size: 50px;
+  padding-top: 53px;
+  color: #00b4cc;
+}
+.txtsec .hpra {
+  font-size: 16px;
+  padding-top: 18px;
+}
+.txtsec span {
+  background-color: #000000;
+  color: white;
+  padding: 0px 5px;
+}
+
+/* end of text section */
+
+/* begin of header */
+
+header {
+  padding-top: 50px;
+  position: relative;
+}
+header div {
+  color: white;
+  position: absolute;
+  top: 43%;
+  left: 20px;
+}
+div h1 {
+  margin: 0px;
+  text-transform: uppercase;
+  font-size: 50px;
+  letter-spacing: 4px;
+  padding: 20px 0px;
+}
+div .janpra {
+  font-size: 30px;
+  letter-spacing: 4px;
+}
+div .subscribe {
+  padding: 15px 25px;
+  font-size: 18px;
+  border: none;
+  text-transform: uppercase;
+  opacity: 0.6;
+
+  /* other way */
+  /* background-color: rgba(160, 160, 160, 0.9); */
+  /* alph "a" 0.9 */
+}
+div button:hover {
+  background-color: rgb(204, 199, 199);
+}
+/* end of the header */
+
+/* begin of main */
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 67% 33%);
+  background-color: #f1f1f1;
+  padding: 8px 16px;
+  margin-top: -10px;
+}
+/* begin os lside */
+.container .leftside {
+  background-color: #f1f1f1;
+}
+.container .leftside article {
+  text-align: center;
+  margin: 16px;
+  padding: 12px 24px;
+  background-color: white;
+}
+.container .leftside article h2 {
+  text-transform: uppercase;
+  font-size: 24px;
+  margin: 10px 0px;
+  font-weight: 400;
+}
+.container .leftside article .despra {
+  font-size: 18px;
+  letter-spacing: normal;
+  margin: 10px 0px;
+}
+.container .leftside article .despra span {
+  color: #6e6e6e;
+}
+.container .leftside article .articlepic {
+  padding: 16px 0px;
+}
+.container .leftside article .pra {
+  font-size: 15px;
+  font-family: "open sans";
+  margin: 15px 0px;
+  font-weight: 400;
+  text-align: justify;
+  line-height: 1.5;
+}
+.container .leftside article .buttonsdiv {
+  display: flex;
+  justify-content: space-between;
+}
+.container .leftside article .buttonsdiv .like {
+  background-color: white;
+  color: #000000;
+  font-family: "open sans";
+  border: 1px solid grey;
+  padding: 8px 16px;
+  font-size: 15px;
+  font-weight: bolder;
+}
+.container .leftside article .buttonsdiv .like:hover {
+  background-color: rgb(159, 154, 154);
+}
+.container .leftside article .buttonsdiv .replies {
+  background-color: #03334e;
+  color: white;
+  font-family: "open sans";
+  border: 1px solid #03334e;
+  padding: 8px 16px;
+  font-size: 15px;
+  font-weight: bolder;
+}
+.container .leftside article .buttonsdiv .replies:hover {
+  background-color: black;
+  color: white;
+}
+
+.container .leftside article .buttonsdiv .replies span {
+  padding: 0px 8px;
+  color: #000000;
+  background-color: white;
+  font-size: 15px;
+  font-family: "open sans";
+}
+/* hidden line to give more margin 
+   between the first and second article */
+
+.container .leftside hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+
+/* begin of replies */
+
+.container .leftside article .articlefoot {
+  display: flex;
+  margin-top: 10px;
+  padding: 16px 0px;
+}
+.container .leftside article .line {
+  border-bottom: 1px solid #eee;
+  margin-top: 50px;
+}
+.container .leftside article .articlefoot .pic {
+  margin-right: 28px;
+}
+.container .leftside article .articlefoot .comt {
+  margin-top: 10px;
+}
+.container .leftside article .articlefoot .p1 {
+  margin: 12.5px 0px;
+  font-size: 20px;
+  text-align: left;
+}
+.container .leftside article .articlefoot .p1 span {
+  font-size: 15px;
+  opacity: 0.6;
+}
+.container .leftside article .articlefoot .p2 {
+  font-size: 15px;
+  font-family: "open sans";
+  text-align: justify;
+  line-height: 1.5;
+}
+/* end of replies */
+
+/* begin of rside */
+.container .rightside {
+  background-color: #f1f1f1;
+}
+.container .rightside article {
+  margin: 16px;
+  background-color: white;
+}
+.container .rightside article img {
+  width: 100%;
+  filter: grayscale(75%);
+}
+.container .rightside article div {
+  background-color: #03334e;
+  color: white;
+  padding: 0.15px 16px;
+  margin-top: -10px;
+}
+.container .rightside article div .name {
+  font-size: 20px;
+  margin: 15px 0px;
+  font-weight: 300;
+}
+.container .rightside article div p {
+  font-size: 15px;
+  font-family: "open sans";
+  margin: 15px 0px;
+  line-height: 1.5;
+}
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+/* begin of popular posts section */
+.popularsec {
+  margin: 16px;
+}
+.popularsec .posts {
+  padding: 8px 16px;
+  background-color: #03334e;
+  color: white;
+}
+.popularsec .posts .pp {
+  font-size: 20px;
+  font-family: "oswald";
+  font-weight: 300;
+  margin: 10px 0px;
+}
+.popularsec ul {
+  list-style: none;
+}
+
+.popularsec ul li {
+  padding: 8px 16px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  background-color: white;
+  padding: 16px;
+}
+.popularsec ul li img {
+  margin-right: 16px;
+}
+.popularsec ul li h5 {
+  font-size: 18px;
+  font-family: "open sans";
+  font-weight: 100;
+  margin-bottom: 6px;
+}
+.popularsec ul li .caption {
+  font-size: 16px;
+  font-family: "open sans";
+}
+.popularsec ul li:hover {
+  background-color: #cbc7c7;
+}
+.popularsec ul li:hover img {
+  width: 70px;
+  transition: 0.3s 0.2s;
+}
+/* end of popular posts section */
+
+/* begin of advertise section */
+.popularsec .ad {
+  background-color: white;
+  padding: 0.15px 16px;
+}
+.popularsec .ad .adhere {
+  background-color: #f1f1f1;
+  height: 200px;
+  margin: 16px 0px;
+  padding: 0.15px 16px;
+  position: relative;
+}
+.popularsec .ad .adhere .adspan {
+  font-size: 15px;
+  font-family: "open sans";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* end of advertise section */
+
+/* begin of tags section */
+.popularsec .tagscont {
+  padding: 0.15px 16px;
+  background-color: white;
+}
+.popularsec .tagscont .tags {
+  color: #000000;
+  font-size: 15px;
+  font-family: "open sans";
+  margin: 15px 0px;
+}
+.popularsec .tagscont .tags span {
+  display: inline-block;
+  padding: 4px 8px;
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 16px;
+  background-color: #f1f1f1;
+  color: #000000;
+  font-family: "open sans";
+}
+.popularsec .tagscont .tags .dark {
+  font-size: 15px;
+  font-family: "open sans";
+  color: white;
+  background-color: #000000;
+  display: inline-block;
+  padding: 4px 8px;
+  margin-bottom: 16px;
+}
+/* end of tags section */
+
+/* begin of inspiration section */
+.popularsec .inscontain {
+  display: flex;
+  padding: 0px 8px;
+  background-color: white;
+}
+.popularsec .inscontain .imgs1 {
+  width: 50%;
+  padding: 0px 8px;
+}
+.popularsec .inscontain .imgs1 .img-1 {
+  margin: 15px 0px;
+}
+.popularsec .inscontain .imgs1 .img-2 {
+  margin-bottom: 15px;
+}
+
+.popularsec .inscontain .imgs2 {
+  width: 50%;
+  padding: 0px 8px;
+}
+.popularsec .inscontain .imgs2 .img-3 {
+  filter: grayscale(75%);
+  margin: 15px 0px;
+}
+.popularsec .inscontain .imgs2 .img-4 {
+  margin-bottom: 15px;
+}
+
+/* end of inspiration section */
+
+/* begin of follow me section */
+.popularsec .follow {
+  background-color: white;
+  padding: 8px 16px;
+  font-size: 24px;
+}
+.popularsec .follow i {
+  padding: 0px 3px;
+}
+.fa-square-facebook:hover {
+  color: gray;
+}
+.fa-square-instagram:hover {
+  color: gray;
+}
+.fa-snapchat:hover {
+  color: gray;
+}
+.fa-pinterest-p:hover {
+  color: gray;
+}
+.fa-square-twitter:hover {
+  color: gray;
+}
+.fa-linkedin-in:hover {
+  color: gray;
+}
+/*end of follow me section */
+
+/* begin of subscribe section */
+.popularsec .subcontain {
+  padding: 0.15px 16px;
+  background-color: white;
+}
+.popularsec .subcontain .sub-caption {
+  font-size: 15px;
+  font-family: "open sans";
+  font-weight: 400;
+  margin: 15px 0px;
+  color: #000000;
+}
+.popularsec .subcontain .enter-mail input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  margin: 5px 0px 15px 0px;
+}
+.popularsec .subcontain .sub-butt button {
+  width: 100%;
+  padding: 8px 16px;
+  margin-bottom: 15px;
+  color: white;
+  font-size: 15px;
+  font-family: "open sans";
+  font-weight: 400;
+  background-color: #03334e;
+  border: none;
+}
+.popularsec .subcontain .sub-butt button:hover {
+  color: #000000;
+  background-color: #ccc;
+}
+/*end of subscribe section */
+/* begin of the footer */
+
+footer {
+  background-color: #03334e;
+  width: 100%;
+  height: 150px;
+}
+footer .top {
+  padding-left: 20px;
+  padding-top: 30px;
+}
+footer .top a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 13px 25px;
+  font-size: 17px;
+  font-weight: 100;
+  background-color: white;
+  color: #000000;
+}
+footer .top a:hover {
+  color: #000000;
+  background-color: #00b4cc;
+}
+.fa-arrow-up {
+  margin-right: 8px;
+  color: #000000;
+}
+footer .top a:hover .fa-arrow-up {
+  color: #000000;
+}
+
+footer .social {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+footer a {
+  display: inline-block;
+  color: white;
+  border-radius: 3px;
+  font-size: 36px;
+  padding: 1px 17px;
+}
+/* social icons hover */
+
+.fa-facebook:hover {
+  color: #1877f2;
+  font-size: 45px;
+  transition: 0.3s 0.1s;
+}
+.fa-instagram:hover {
+  color: #e4405f;
+  font-size: 40px;
+  transition: 0.3s 0.1s;
+}
+.fa-square-snapchat:hover {
+  color: #fffc00;
+  font-size: 45px;
+}
+.fa-flickr:hover {
+  color: #ff0084;
+  font-size: 45px;
+  transition: 0.3s 0.1s;
+}
+.fa-twitter:hover {
+  color: #1da1f2;
+  font-size: 45px;
+  transition: 0.3s 0.1s;
+}
+.fa-linkedin:hover {
+  color: #0a66c2;
+  font-size: 45px;
+  transition: 0.3s 0.1s;
+}
+
+/* end of the footer */
+/* extra small devices */
+@media (max-width: 600px) {
+  nav {
+    width: 100%;
+  }
+  nav .logo {
+    font-size: 25px;
+    padding-left: 8px;
+  }
+  nav .search {
+    width: 50%;
+  }
+  nav .search input::placeholder {
+    font-size: 15px;
+    color: #03334e;
+  }
+  nav .dropdown {
+  }
+  header {
+    padding-top: 30px;
+  }
+  header div {
+    top: 40%;
+  }
+  div .janpra {
+    font-size: 40px;
+  }
+  div h1 {
+    padding: 15px 0px;
+    text-transform: uppercase;
+    font-size: 22px;
+  }
+  header div .subscribe {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+  }
+  .container .leftside article .articlefoot {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  footer a {
+    font-size: 30px;
+    padding: 1px 13px;
+  }
+}
+
+/* small devices */
+@media only screen and (min-width: 600px) {
+}
+/* medium devices */
+@media only screen and (min-width: 678px) {
+}
+/* large devices */
+@media only screen and (max-width: 992px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+  }
+}
+/* extra large devices */
+@media only screen and (min-width: 1200px) {
+}
